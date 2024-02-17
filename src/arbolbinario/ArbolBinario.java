@@ -12,8 +12,10 @@ import java.util.List;
  * Basado en nodos con enlaces a padre y dos hijos.
  * 
  * 
+ * @param <T> Clase de valor que se guarda en el arbol
  * @author Jose Javier Bailon Ortiz
  */
+
 public class ArbolBinario<T extends Comparable<T>> {
 	
 	/**
@@ -31,6 +33,7 @@ public class ArbolBinario<T extends Comparable<T>> {
 	
 	/**
 	 * Constructor a partir de una lista
+	 * @param lista Lista a partir de la cual construir el arbol
 	 */
 	public ArbolBinario(List<T> lista) {
 		Iterator<T> it = lista.iterator();
@@ -209,11 +212,11 @@ public class ArbolBinario<T extends Comparable<T>> {
 	
 	
 	/**
-	 * Busqueda recursiva de un valor. El
+	 * Busqueda recursiva de un valor. 
 	 * @param lista
 	 * @param nodo
 	 * @param valor
-	 * @return
+	 * @return Una lista con los valores por los que se ha pasado hasta llegar al buscado o null si no existe
 	 */
 	private List<T> buscar(ArrayList<T> lista, ArbolBinario<T>.Nodo<T> nodo, T valor) {
 		//Caso base 1
@@ -262,7 +265,7 @@ public class ArbolBinario<T extends Comparable<T>> {
 
 	/**
 	 * Busca un nodo con el valor determinado usando recursividad
-	 * 
+	 * @param nodo Nodo actual del a busqueda recursiva 
 	 * @param valor El valor a buscar
 	 * @return El nodo si esta o null si no existe
 	 */
@@ -298,7 +301,7 @@ public class ArbolBinario<T extends Comparable<T>> {
 
 		/**
 		 * Constructor 
-		 * @param valor
+		 * @param valor El valor a guardar
 		 */
 		public Nodo(Y valor) {
 			this.valor = valor;
@@ -315,7 +318,7 @@ public class ArbolBinario<T extends Comparable<T>> {
 
 		/**
 		 * Define el padre
-		 * @param padre
+		 * @param padre El nodo que sera el padre
 		 */
 		public void setPadre(Nodo<Y> padre) {
 			this.padre = padre;
@@ -332,7 +335,7 @@ public class ArbolBinario<T extends Comparable<T>> {
 
 		/**
 		 * Define el hijo menor
-		 * @param menor
+		 * @param menor Nodo a definir como menor
 		 */
 		public void setMenor(Nodo<Y> menor) {
 			this.menor = menor;
@@ -366,7 +369,7 @@ public class ArbolBinario<T extends Comparable<T>> {
 		
 		/**
 		 * Define el valor contenido en el nodo
-		 * @param valor
+		 * @param valor Valor a introducior en el nodo
 		 */
 		public void setValor(Y valor) {
 			this.valor = valor;

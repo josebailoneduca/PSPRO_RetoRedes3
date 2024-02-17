@@ -3,7 +3,6 @@
  */
 package arbolbinario;
 
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
@@ -12,8 +11,10 @@ import java.util.List;
 /**
  * Extension del arbol binario con metodos que ayudan a su dibujado.
  * 
+ * @param <T> Clase de valor que se guarda en el arbol
  * @author Jose Javier Bailon Ortiz
  */
+
 public class ArbolBinarioDibujable<T extends Comparable<T>> extends ArbolBinario<T> {
 
 	/**
@@ -109,11 +110,10 @@ public class ArbolBinarioDibujable<T extends Comparable<T>> extends ArbolBinario
 	 * Dibuja un nodo y recursivamente sus hijos
 	 * 
 	 * @param nodo Nodo a dibujar
-	 * 
 	 * @param g    Graphics Graphics a usar
 	 * @param p    Profundidad actual Profundidad actual
 	 * @param x    Posicion en X Posicion en X del nodo
-	 * @param j    Posicion en Y Posicion en Y del nodo
+	 * @param y    Posicion en Y Posicion en Y del nodo
 	 */
 	private void dibujarNodo(Nodo<T> nodo, Graphics2D g, int p, int x, int y) {
 		
@@ -150,6 +150,7 @@ public class ArbolBinarioDibujable<T extends Comparable<T>> extends ArbolBinario
 	 * @param g Graphics a usar
 	 * @param x Posicion en x
 	 * @param y Posicion en Y
+	 * @param radio Radio a usar para el circulo
 	 * @param valor Valor a mostrar
 	 */
 	private void dibujarCelda(Graphics2D g, int x, int y, int radio, T valor) {

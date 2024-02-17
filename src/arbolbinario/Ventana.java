@@ -31,8 +31,16 @@ import java.awt.FlowLayout;
  */
 public class Ventana extends JFrame implements ActionListener {
 
+	/**
+	 * Serial
+	 */
 	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Jpanel global
+	 */
 	private JPanel contentPane;
+	
 	/**
 	 * Campo de introduccion de numeros
 	 */
@@ -221,6 +229,8 @@ public class Ventana extends JFrame implements ActionListener {
 
 	/**
 	 * Main de la aplicacion.
+	 * 
+	 * @param args Sin argumentos
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
